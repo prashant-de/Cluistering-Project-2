@@ -2,7 +2,7 @@
 
 ## Task 1: K-means on Toy Problem (Points on Cartesian plane)
 
-This task uses a small set of points in the Cartesian plane and applies K-means clustering to group them into three clusters. The k-mean algorithm is written manually without using any standar library(eg. scikit learn) for better understanding the basics of K-means. 
+This task uses a small set of points in the Cartesian plane and applies K-means clustering to group them into three clusters. The k-mean algorithm is written manually without using any standard library such as scikit-learn for better understanding the basics of K-means.
 
 ### Given points
 
@@ -23,7 +23,7 @@ This task uses a small set of points in the Cartesian plane and applies K-means 
 
 ### Method used
 
-We solve the problem using the K-means algorithm in `task1.py`.
+We solve the problem using the K-means algorithm in `task1/task1.py`.
 
 The process is:
 1. Assign each point to the nearest centroid.
@@ -38,7 +38,7 @@ The stopping strategy is:
 ## Clustering Plot
 This is the result of the clustering acheived form utilizing the k-means algorithm. 
 
-![Clustering result](task1_figure.webp)
+![Clustering result](task1/task1_figure.webp)
 
 ### Answers to the questions
 
