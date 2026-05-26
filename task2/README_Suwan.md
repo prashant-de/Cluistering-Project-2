@@ -55,4 +55,4 @@ The plot shows that the centroids are spread out across the territory while stil
 ## Notes
 
 - The script uses `shapely` for polygon handling.
-- `random_state` is fixed in the script for reproducibility.
+- `random.seed` is fixed in the script for reproducibility.
