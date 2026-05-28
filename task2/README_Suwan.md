@@ -41,7 +41,7 @@ Example for 10 points:
 
 The figure below shows the South Korea territory boundary, Full mesh grid, Filtered grid(inside territory ,and the final K-means centroids.
 
-![Task 2 result](Task2_Figure_Suwan.png)
+![Task 2 result](task2/figuer_territory,RawMesh,FilteredGrid.png)
 
 ## Explanation of the Plot
 
