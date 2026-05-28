@@ -1,18 +1,18 @@
 # Task 2: Even Distribution in South Korea Territory
 
-[cite_start]This task generates evenly distributed vertiport-style points inside the South Korea territory polygon using a custom K-Means clustering algorithm[cite: 7].
+This task generates evenly distributed vertiport-style points inside the South Korea territory polygon using a custom K-Means clustering algorithm[cite: 7].
 
 ## Goal
-[cite_start]Use the territory boundary from `data/Data_South_Korea_territory.csv`, sample numerous interior points via rejection sampling, and run a self-implemented K-Means algorithm to place $N$ evenly distributed centroids ($K = 3, 5, 10$) inside the territory[cite: 8].
+Use the territory boundary from `data/Data_South_Korea_territory.csv`, sample numerous interior points via rejection sampling, and run a self-implemented K-Means algorithm to place $N$ evenly distributed centroids ($K = 3, 5, 10$) inside the territory[cite: 8].
 
 ## Problem and Strategy
-[cite_start]The main challenge is that the territory is not a simple rectangle, making it impossible to place centroids evenly by hand[cite: 12]. 
+The main challenge is that the territory is not a simple rectangle, making it impossible to place centroids evenly by hand[cite: 12]. 
 
 To solve this, the strategy is as follows:
-* [cite_start]Use the `shapely` library to build a precise territory polygon[cite: 15, 19].
-* [cite_start]Create a dense $100 \times 100$ grid over the bounding box and apply **Rejection Sampling** to filter and keep only the points located strictly inside the territory boundary[cite: 10, 15, 29, 30].
-* [cite_start]Apply a custom K-Means clustering loop from scratch to these interior samples[cite: 10, 15, 49].
-* [cite_start]Utilize the final K-Means centroids as the optimally distributed vertiport locations[cite: 14, 15].
+* Use the `shapely` library to build a precise territory polygon[cite: 15, 19].
+* Create a dense $100 \times 100$ grid over the bounding box and apply **Rejection Sampling** to filter and keep only the points located strictly inside the territory boundary[cite: 10, 15, 29, 30].
+* Apply a custom K-Means clustering loop from scratch to these interior samples[cite: 10, 15, 49].
+* Utilize the final K-Means centroids as the optimally distributed vertiport locations[cite: 14, 15].
 
 ---
 
