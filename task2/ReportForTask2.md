@@ -207,3 +207,47 @@ fig2.tight_layout()
 
 # Launch both distinct pop-up plotting windows simultaneously
 plt.show()
+
+## Explanation of the Plots and Outputs
+
+[cite_start]Running the script initializes two independent pop-up visualization windows[cite: 50, 86, 128]:
+
+### Figure 1: Data Preprocessing Flow
+[cite_start]Demonstrates the data pipeline transforming raw coordinates into a filtered spatial dataset[cite: 51, 87, 129]:
+* [cite_start]**Raw Territory Boundary:** The red outline maps the complex territory polygon of South Korea[cite: 51, 87, 129].
+* [cite_start]**Full Mesh Grid:** The faint gray points represent the initial 100x100 bounding box mesh grid generated before filtering[cite: 52, 88, 130].
+* [cite_start]**Filtered Grid:** The blue points highlight the points successfully isolated inside the territory using rejection sampling[cite: 53, 89, 131].
+
+### Figure 2: K-Means Clustering Result Comparison (K=3, 5, 10)
+[cite_start]Compares the spatial distribution of vertiport locations as the cluster configuration changes[cite: 54, 90, 132]:
+* [cite_start]**Red Stars** represent the final K-Means centroids mapping optimal vertiport hubs[cite: 54, 90, 132].
+* [cite_start]The plots show that the centroids automatically spread out across the territory while remaining strictly inside the boundary limits, meeting the exact goals of the task without manual intervention[cite: 55, 91, 133].
+
+---
+
+## Notes
+* [cite_start]The script strictly relies on `shapely` for all complex polygon geometries and inclusion tests[cite: 56, 92, 134].
+* [cite_start]`random.seed` is set to 42 to ensure initialization and final centroids remain reproducible across runs[cite: 57, 93, 135].
+
+---
+
+## AI Use Disclosure
+
+### 1) Which AI tool you used
+* [cite_start]Gemini [cite: 58, 94, 136]
+
+### 2) Which part of the assignment the AI assisted with
+* [cite_start]**Data Preprocessing & Visualization:** The AI assisted with implementing the 2D mesh grid generation code based on the South Korea territory boundary data, as well as creating the Matplotlib visualization plot structures to clearly demonstrate the data pipeline[cite: 58, 94, 136].
+
+### 3) How the AI helped you
+* [cite_start]**Code Generation & Optimization:** The AI helped write the logic utilizing `numpy.meshgrid` and the `shapely` library to efficiently filter out grid points located strictly inside the territory boundary[cite: 59, 95, 137].
+* [cite_start]**Visualization Layout Design:** The AI provided the structure for the chart layouts (separating them into two distinct figures `fig1` and `fig2` for maximum clarity) and refined visual elements (such as color mapping, transparency, and positioning the multi-column legend outside the plot) to intuitively present the results[cite: 60, 96, 138].
+
+### 4) What part you completed on your own
+* [cite_start]**Core Algorithm Implementation:** I independently developed the core K-Means clustering algorithm from scratch using pure Python and NumPy, without relying on external machine learning libraries like scikit-learn[cite: 61, 97, 139]. [cite_start]This included writing the entire logic for initializing random centroids, calculating Euclidean distances, assigning points to clusters, updating centroids, and managing the convergence loop (`while` loop)[cite: 62, 98, 140].
+* [cite_start]**Data Integration & Debugging:** I successfully connected the filtered grid data format (`points` array) generated in the preprocessing step with my custom K-Means algorithm, ensuring the entire script executed seamlessly without errors[cite: 63, 99, 141].
+
+### 5) Exact prompts used
+> [cite_start]"I have a CSV file containing the boundary coordinates of South Korea. Can you write a Python script using the Shapely library that generates a 100x100 mesh grid over this area and filters out only the points inside the boundary?" [cite: 64, 100, 142]
+
+> [cite_start]"Can you write a Matplotlib code snippet that takes this preprocessed data and visualizes the whole process in a 4-panel horizontal subplot? The final panel should display the K-Means clusters with their final centroids marked as stars." [cite: 65, 101, 143]
