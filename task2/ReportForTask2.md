@@ -208,6 +208,8 @@ fig2.tight_layout()
 # Launch both distinct pop-up plotting windows simultaneously
 plt.show()
 
+
+
 ## Explanation of the Plots and Outputs
 
 [cite_start]Running the script initializes two independent pop-up visualization windows[cite: 50, 86, 128]:
@@ -248,6 +250,9 @@ plt.show()
 * [cite_start]**Data Integration & Debugging:** I successfully connected the filtered grid data format (`points` array) generated in the preprocessing step with my custom K-Means algorithm, ensuring the entire script executed seamlessly without errors[cite: 63, 99, 141].
 
 ### 5) Exact prompts used
+> [cite_start]"I have a CSV file containing the boundary coordinates of South Korea. Can you write a Python script using the Shapely library that generates a 100x100 mesh grid over this area and filters out only the points inside the boundary?" [cite: 64, 100, 142]
+
+> [cite_start]"Can you write a Matplotlib code snippet that takes this preprocessed data and visualizes the whole process in a 4-panel horizontal subplot? The final panel should display the K-Means clusters with their final centroids marked as stars." [cite: 65, 101, 143]
 > [cite_start]"I have a CSV file containing the boundary coordinates of South Korea. Can you write a Python script using the Shapely library that generates a 100x100 mesh grid over this area and filters out only the points inside the boundary?" [cite: 64, 100, 142]
 
 > [cite_start]"Can you write a Matplotlib code snippet that takes this preprocessed data and visualizes the whole process in a 4-panel horizontal subplot? The final panel should display the K-Means clusters with their final centroids marked as stars." [cite: 65, 101, 143]
