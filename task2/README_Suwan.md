@@ -31,7 +31,7 @@ The strategy is:
 
 ## Run
 
-Example for 10 points:
+Example for 3, 5, 10 points:
 
 ## Output
 
