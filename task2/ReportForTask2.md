@@ -3,22 +3,22 @@
 This task generates evenly distributed vertiport-style points inside the South Korea territory polygon using a custom K-Means clustering algorithm[cite: 7].
 
 ## Goal
-Use the territory boundary from `data/Data_South_Korea_territory.csv`, sample numerous interior points via rejection sampling, and run a self-implemented K-Means algorithm to place $N$ evenly distributed centroids ($K = 3, 5, 10$) inside the territory[cite: 8].
+Use the territory boundary from `data/Data_South_Korea_territory.csv`, sample numerous interior points via rejection sampling, and run a self-implemented K-Means algorithm to place $N$ evenly distributed centroids ($K = 3, 5, 10$) inside the territory.
 
 ## Problem and Strategy
-The main challenge is that the territory is not a simple rectangle, making it impossible to place centroids evenly by hand[cite: 12]. 
+The main challenge is that the territory is not a simple rectangle, making it impossible to place centroids evenly by hand. 
 
 To solve this, the strategy is as follows:
-* Use the `shapely` library to build a precise territory polygon[cite: 15, 19].
-* Create a dense $100 \times 100$ grid over the bounding box and apply **Rejection Sampling** to filter and keep only the points located strictly inside the territory boundary[cite: 10, 15, 29, 30].
-* Apply a custom K-Means clustering loop from scratch to these interior samples[cite: 10, 15, 49].
-* Utilize the final K-Means centroids as the optimally distributed vertiport locations[cite: 14, 15].
+* Use the `shapely` library to build a precise territory polygon.
+* Create a dense $100 \times 100$ grid over the bounding box and apply **Rejection Sampling** to filter and keep only the points located strictly inside the territory boundary.
+* Apply a custom K-Means clustering loop from scratch to these interior samples.
+* Utilize the final K-Means centroids as the optimally distributed vertiport locations.
 
 ---
 
 ## Python Script (`task2_Suwan.py`)
 
-[cite_start]Below is the complete, fully functional Python script[cite: 3]. [cite_start]The script outputs two separate, independent figure windows: **Figure 1** for the data preprocessing sequence, and **Figure 2** for the clustering results across different $K$ values ($K=3, 5, 10$)[cite: 25, 91].
+Below is the complete, fully functional Python script[cite: 3]. [cite_start]The script outputs two separate, independent figure windows: **Figure 1** for the data preprocessing sequence, and **Figure 2** for the clustering results across different $K$ values ($K=3, 5, 10$).
 
 ```python
 """
